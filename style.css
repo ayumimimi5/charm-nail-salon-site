@@ -1,0 +1,670 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-image: url("img/bg-top.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #4a2828;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 182, 193, 0.4);
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 10px;
+}
+
+.header-logo img {
+  height: 88px;
+  display: block;
+}
+
+/* global nav */
+.gnav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.gnav a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #7a2e35;
+  padding: 4px 6px;
+}
+
+/* ハンバーガーボタン（PCでは非表示） */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 22px;
+  background: #e06693;
+  border-radius: 999px;
+}
+
+/* Top section */
+.top-section {
+  text-align: center;
+  padding: 40px 16px 32px;
+  background: rgba(255, 245, 248, 0.96);
+}
+
+.top-copy-area {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 手書き風コピー（Zen Kurenaido） */
+.main-copy {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #e06693;
+  font-family: "Zen Kurenaido", sans-serif;
+  letter-spacing: 0.1em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.sub-copy {
+  margin-top: 18px;
+  font-size: 17px;
+  color: #e06693;
+  font-family: "Zen Kurenaido", sans-serif;
+  letter-spacing: 0.1em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+  overflow: hidden; /* 枠はなし。中身だけ表示 */
+}
+
+.slider-inner {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* slider arrows */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 32px;
+  color: #e06693;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.slider-btn.prev {
+  left: 6px;
+}
+
+.slider-btn.next {
+  right: 6px;
+}
+
+/* dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.slider-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: #f0c6d5;
+  cursor: pointer;
+}
+
+.slider-dots .dot.active {
+  width: 10px;
+  background: #e06693;
+}
+
+/* ABOUT */
+.about-section {
+  padding: 60px 20px;
+  background-image: url("img/about/bg-about.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #6a3a3a;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #662b33;
+  letter-spacing: 2px;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-photo img,
+.about-license img,
+.about-room img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.about-career-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-career {
+  font-weight: normal;
+  line-height: 1.8;
+  font-size: 15px;
+  margin: 0;
+}
+
+.about-note {
+  font-size: 14px;
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+/* MENU */
+.menu-section {
+  padding: 60px 20px;
+  text-align: center;
+  color: #4a2828;
+  background: rgba(255, 230, 238, 0.9);
+}
+
+.menu-frame {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 40px 24px;
+  background-image: url("img/menu/menu-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 28px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f5ced8;
+}
+
+.menu-frame-arch {
+  border-radius: 220px 220px 28px 28px;
+  padding-top: 60px;
+}
+
+.menu-block + .menu-block {
+  margin-top: 28px;
+}
+
+.menu-jp {
+  font-size: 14px;
+  color: #9a5f4a;
+  margin-bottom: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.menu-heading {
+  font-size: 22px;
+  color: #8b583e;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dotted #b8837b;
+  color: #2b1b1b;
+  font-weight: 500;
+}
+
+.menu-price {
+  font-weight: 700;
+  color: #e0302a;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.menu-item {
+  flex: 1;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+
+  /* Keep option text like "(マグネット+800円)" close to the item name on desktop,
+     and allow it to wrap cleanly on small screens / large font sizes. */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+
+/* Default spacing for the option text */
+.menu-option {
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+
+
+
+.menu-footnote {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #5a3030;
+  line-height: 1.6;
+}
+
+/* RESERVATION */
+.reservation-section {
+  padding: 60px 20px 40px;
+  text-align: center;
+  color: #6a3a3a;
+  background: #ffffff;
+}
+
+.reservation-text {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.reservation-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.btn-line,
+.btn-instagram {
+  padding: 14px 0;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+}
+
+.btn-line {
+  background-color: #06c755;
+}
+
+.btn-instagram {
+  background: linear-gradient(90deg, #d66dd7, #ff9e5b);
+}
+
+/* ACCESS */
+.access-section {
+  padding: 60px 20px;
+  background-image: url("img/access/access-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  color: #7b3b3b;
+  text-align: center;
+}
+
+.access-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.access-title {
+  margin-bottom: 30px;
+}
+
+.access-address {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.access-map {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin-bottom: 24px;
+}
+
+.access-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.access-info {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.access-row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.access-icon {
+  font-size: 20px;
+}
+
+.access-row p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px 16px 32px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #6a3a3a;
+}
+
+.footer-name {
+  margin: 0 0 4px;
+}
+
+.footer-copy {
+  margin: 0 0 4px;
+}
+
+.footer-links {
+  margin: 0;
+}
+
+.footer-links a {
+  color: #7a2e35;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+/* スマホ用ナビ（ハンバーガー）＆ロゴセンター */
+@media (max-width: 767px) {
+  .header {
+    position: fixed;
+    width: 100%;
+  }
+
+  .header-inner {
+    justify-content: center;
+    position: relative;
+  }
+
+  .header-logo img {
+    height: 96px;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 10px;
+  }
+
+  .gnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(255, 182, 193, 0.5);
+    display: none;
+  }
+
+  .gnav ul {
+    flex-direction: column;
+    padding: 8px 16px 16px;
+    gap: 0;
+  }
+
+  .gnav li {
+    border-bottom: 1px solid #f7d6df;
+  }
+
+  .gnav a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .gnav.is-open {
+    display: block;
+  }
+
+  .top-section {
+    padding-top: 100px;
+  }
+}
+
+/* PCレイアウト */
+@media (min-width: 768px) {
+  .slider {
+    max-width: 700px;
+  }
+
+  .main-copy {
+    font-size: 24px;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  .about-photo,
+  .about-text,
+  .about-license,
+  .about-career-box,
+  .about-room,
+  .about-note {
+    grid-column: span 2;
+  }
+
+  .menu-heading {
+    font-size: 26px;
+  }
+
+  .menu-list li {
+    font-size: 18px;
+  }
+
+  .access-section {
+    padding: 80px 40px;
+  }
+
+  .access-address {
+    font-size: 16px;
+  }
+
+  .access-row p {
+    font-size: 15px;
+  }
+
+  .reservation-buttons {
+    flex-direction: row;
+    max-width: 700px;
+  }
+
+  .btn-line,
+  .btn-instagram {
+    flex: 1;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .about-text {
+    font-size: 13px;
+  }
+  .about-career {
+    font-size: 13px;
+  }
+}
+
+
+/* Mobile tweaks: sub-copy and menu wrapping */
+@media (max-width: 600px) {
+  .sub-copy {
+    font-size: 14px;
+    letter-spacing: 0.06em;
+  }
+  .menu-list li {
+    font-size: 16px;
+  }
+  .menu-item {
+    font-size: 16px;
+  }
+}
+
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .sub-copy {
+    font-size: 14px;
+    letter-spacing: 0.04em;
+  }
+  .menu-item {
+    font-size: 16px;
+  }
+}
+
+/* ===== Menu layout fix for mobile ===== */
+.menu-list li{
+  display:flex;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.menu-item{
+  flex:1;
+  min-width:0;
+  text-align:left;
+}
+
+.menu-price{
+  white-space:nowrap;
+  flex:0 0 auto;
+  margin-left:auto;
+}
+
+@media (max-width: 480px){
+  .menu-option{
+    display:block;
+    margin-top:4px;
+    font-size:0.9em;
+    opacity:0.9;
+  }
+}
+
+
+/* NOTE:
+   ここで .menu-item を Grid にしていた影響で、
+   「ワンカラー（マグネット＋800円）」の注釈が
+   PC表示で離れて見えることがありました。
+   メニューの行レイアウトは .menu-list li の flex で統一します。
+*/
+
+
